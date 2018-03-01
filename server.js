@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var videos = require('./routes/videos');
 
-var port = 3000;
 var app = express();
 
 app.set('views', __dirname + '/views');
@@ -24,6 +23,6 @@ app.use('*',function (req, res) {
     res.redirect('/');
 });
 
-app.listen(port, function(){
-    console.log("Server running on localhost:" + port);
+app.listen(2000, function(){
+    console.log("Server running on port 2000 ");
 })
